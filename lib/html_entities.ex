@@ -62,6 +62,7 @@ defmodule HtmlEntities do
   defp replace_character("\""), do: "&quot;"
   defp replace_character("&"), do: "&amp;"
   defp replace_character("<"), do: "&lt;"
+  defp replace_character("<̶̶"), do: "&lt;&#x336;"
   defp replace_character("<̶"), do: "&lt;&#x336;"
   defp replace_character(">̶"), do: "&gt;&#x336;"
   defp replace_character(">"), do: "&gt;"

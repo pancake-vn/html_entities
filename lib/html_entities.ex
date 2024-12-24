@@ -63,9 +63,6 @@ defmodule HtmlEntities do
   defp replace_character("&"), do: "&amp;"
   defp replace_character("<" <> _), do: "&lt;"
   defp replace_character(">" <> _), do: "&gt;"
-  defp replace_character("\u2066"), do: ""
-  defp replace_character("\u2067"), do: ""
-  defp replace_character("\u2068"), do: ""
-  defp replace_character("\u2069"), do: ""
+  defp replace_character(char) when char in ["\u2066", "\u2067", "\u2068", "\u2069"], do: ""
   defp replace_character(original), do: original
 end
